@@ -27,7 +27,7 @@ function Home() {
                 <div className='w-6/12 flex flex-col gap-6 justify-center items-center'>
                     <div className='flex flex-col gap-6 justify-center items-center backdrop-blur-md p-10'>
                         <Link to="/signup">
-                            <Button className='w-60 h-12 bg-[#FFD43B] hover:text-black'>
+                            <Button className='w-60 h-12 bg-yellow-500 hover:text-black'>
                                 Signup
                             </Button>
                         </Link>
@@ -35,7 +35,7 @@ function Home() {
                         <h2 className='text-white'>OR</h2>
 
                         <Link to="/login">
-                            <Button className='w-60 h-12 bg-[#FFD43B] hover:text-black'>
+                            <Button className='w-60 h-12 bg-yellow-500 hover:text-black'>
                                 Login
                             </Button>
                         </Link>
@@ -54,7 +54,7 @@ function Home() {
     
                 <div className='w-6/12 flex justify-center items-center m-4'>
                 <Link to="/all-posts">
-                    <Button className='w-80 h-14 bg-[#FFD43B] hover:text-black'>
+                    <Button className='w-80 h-14 bg-yellow-500 hover:text-black'>
                         All Posts
                     </Button>
                 </Link>
