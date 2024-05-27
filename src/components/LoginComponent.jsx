@@ -1,13 +1,12 @@
 import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../features/authSlice'
-import {Button, Input, Logo } from "./index"
+import {Button, Input, Logo, myStyle } from "./index"
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
-import { data } from 'autoprefixer'
 import authService from '../appwrite/auth'
 
-function Login() {
+function LoginComponent() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const {register, handleSubmit} = useForm()
@@ -28,7 +27,7 @@ function Login() {
     }
 
   return (
-    <div className='flex items-center justify-center w-full'>
+    <div className='flex items-center justify-center w-full' style={myStyle}>
         <div className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
             {/* Logo */}
             <div className='mb-2 flex justify-center'>
@@ -41,6 +40,7 @@ function Login() {
 
             <p className='mt-2 text-center text-base text-black/60'>
                 Don&apos;t have any account?&nbsp;
+
                 <Link 
                     to="/signup"
                     className='font-medium text-pretty transition-all duration-200 hover:underline'
@@ -79,7 +79,7 @@ function Login() {
 
                     <Button
                         type="submit"
-                        className="w-full"
+                        className="w-full bg-[#FFD43B] hover:text-black"
                     >
                         Sign In
                     </Button>
@@ -90,4 +90,4 @@ function Login() {
   )
 }
 
-export default Login
+export default LoginComponent

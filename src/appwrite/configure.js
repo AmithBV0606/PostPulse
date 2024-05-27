@@ -106,7 +106,7 @@ export class Service{
                 file
             )
         } catch (error) {
-            console.log("Appwrite service :: UploadFile :: error", error)
+            console.log("Appwrite service :: UploadFile :: error", error)   
             return false;
         }
     } 

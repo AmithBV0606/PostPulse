@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import { Container, PostCard } from '../components'
+import { Container, PostCard, myStyle } from '../components'
 import service from '../appwrite/configure'
 
 function AllPosts() {
@@ -16,12 +16,12 @@ function AllPosts() {
     
 
   return (
-    <div className='w-full py-8'>
+    <div className='w-full py-8' style={myStyle}>
         <Container>
             <div className='flex flex-wrap'>
                 {posts.map((post) => (
                     <div key={post.$id} className='p-2 w-1/4'>
-                        <PostCard post={post}/>
+                        <PostCard {...post}/>
                     </div>
                 ))}
             </div>

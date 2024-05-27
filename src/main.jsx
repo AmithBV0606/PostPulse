@@ -5,12 +5,13 @@ import './index.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { AuthLayout, Login, Signup } from './components/index.js'
+import { AuthLayout, LoginComponent } from './components/index.js'
 import AllPosts from "./pages/AllPosts.jsx"
 import AddPost from "./pages/AddPost.jsx"
 import EditPost from "./pages/EditPost.jsx"
 import Post from './pages/Post.jsx'
 import Home from './pages/Home.jsx'
+import Signup from './pages/Signup.jsx'
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
         path:"/login",
         element: (
           <AuthLayout authentication={false}>
-            <Login />
+            <LoginComponent />
           </AuthLayout>
         )
       },
@@ -40,7 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/all-posts",
         element: (
-          <AuthLayout authentication={true}>
+          <AuthLayout authentication>
             {" "}
             <AllPosts />
           </AuthLayout>
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/add-post",
         element: (
-          <AuthLayout authentication={true}>
+          <AuthLayout authentication>
             {" "}
             <AddPost />
           </AuthLayout>
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
       {
         path: "/edit-post/:slug",
         element: (
-          <AuthLayout authentication={true}>
+          <AuthLayout authentication>
             {" "}
             <EditPost />
           </AuthLayout>

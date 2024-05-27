@@ -7,12 +7,19 @@ import PostForm from "./post-form/PostForm"
 import AuthLayout from "./AuthLayout";
 import Button from "./Button";
 import Input from "./Input";
-import Login from "./Login"
+import LoginComponent from "./LoginComponent"
 import Logo from "./Logo";
 import PostCard from "./PostCard";
 import RTE from "./RTE";
 import Select from "./Select"
-import Signup from "./Signup"
+import SignupComponent from "./SignupComponent"
+
+const myStyle = {
+    backgroundImage: "url(/HomeImg3.jpg)",
+    height: "100vh",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+}
 
 export {
     Container,
@@ -24,10 +31,11 @@ export {
     AuthLayout,
     Button,
     Input,
-    Login,
+    LoginComponent,
     Logo,
     PostCard, 
     RTE,
     Select, 
-    Signup
+    SignupComponent,
+    myStyle
 }
